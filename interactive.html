@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeRedPill - Interactif</title>
+    <link rel="icon" href="assets/img/icon/white.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="table.js"></script>
+    <script src="form.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="interactive.html">Interactif</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="interactive">
+            <h2>Statistiques interactives</h2>
+            <p>Comparez votre temps restant avec une vie moyenne.</p>
+            <form id="interactive-form">
+                <label for="age">Âge:</label>
+                <input type="number" id="age" name="age" min="0" max="90" required>
+                <label for="gender">Genre:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                    <option value="other">Autre</option>
+                </select>
+                <button type="submit">Comparer</button>
+            </form>
+            <table id="interactive-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Votre temps</th>
+                        <th>Temps moyen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semaines restantes</td>
+                        <td id="remaining-weeks"></td>
+                        <td id="average-remaining-weeks"></td>
+                    </tr>
+                    <tr>
+                        <td>Semaines écoulées</td>
+                        <td id="elapsed-weeks"></td>
+                        <td id="average-elapsed-weeks"></td>
+                    </tr>
+                    <tr>
+                        <td>Pourcentage de temps restant total passé avec ses parents</td>
+                        <td id="remaining-parents"></td>
+                        <td id="average-remaining-parents"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
