@@ -2,7 +2,7 @@
 	"name": "liferedpill",
 	"version": "0.0.0",
 	"description": "",
-	"main": "html/accueil.html",
+	"main": "src/index.html",
 	"directories": {
 		"doc": "https://github.com/EFREI-2026-L2-F-Web-1/Main#readme"
 	},
