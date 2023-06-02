@@ -1,3 +1,5 @@
+import { getLifeData } from "./life.js";
+
 // Get the current year
 const currentYear = new Date().getFullYear();
 
@@ -14,23 +16,6 @@ lifeForm.addEventListener("submit", (event) => {
 	const lifeData = getLifeData(age, gender);
 	updateTable(lifeData);
 });
-
-// Function to get life data based on age and gender
-function getLifeData(age, gender) {
-	const lifeExpectancy = gender === "male" ? MALE_LIFE_EXPECTANCY : FEMALE_LIFE_EXPECTANCY;
-	const weeksLived = age * 52;
-	const weeksRemaining = (lifeExpectancy - age) * 52;
-	const weeksTotal = lifeExpectancy * 52;
-	const percentageLived = Math.round((weeksLived / weeksTotal) * 100);
-	const percentageRemaining = Math.round((weeksRemaining / weeksTotal) * 100);
-	return {
-		weeksLived,
-		weeksRemaining,
-		weeksTotal,
-		percentageLived,
-		percentageRemaining,
-	};
-}
 
 // Function to update the table with life data
 function updateTable(lifeData) {
