@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeRedPill - Interactif</title>
-    <link rel="icon" href="assets/img/icon/white.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <script src="data.js"></script>
-    <script src="table.js"></script>
-    <script src="form.js"></script>
-    <script src="script.js"></script>
+    <title>LifeRedPill</title>
+    <link rel="icon" href="../assets/img/icon/white.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/form.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -25,10 +25,14 @@
         </nav>
     </header>
     <main>
-        <section id="interactive">
-            <h2>Statistiques interactives</h2>
-            <p>Comparez votre temps restant avec une vie moyenne.</p>
-            <form id="interactive-form">
+        <section id="summary">
+            <h1>LifeRedPill</h1>
+            <p>Un site web pour vous alerter sur le temps qui passe et l'urgence de valoriser l'usage de votre vie.</p>
+        </section>
+        <section id="table">
+            <h2>Tableau interactif</h2>
+            <p>Utilisez le formulaire ci-dessous pour voir comment vous vous comparez à une vie moyenne.</p>
+            <form id="life-form">
                 <label for="age">Âge:</label>
                 <input type="number" id="age" name="age" min="0" max="90" required>
                 <label for="gender">Genre:</label>
@@ -39,34 +43,37 @@
                 </select>
                 <button type="submit">Comparer</button>
             </form>
-            <table id="interactive-table">
+            <table id="life-table">
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Votre temps</th>
-                        <th>Temps moyen</th>
+                        <th>Vie moyenne</th>
+                        <th>Votre vie</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Semaines restantes</td>
-                        <td id="remaining-weeks"></td>
-                        <td id="average-remaining-weeks"></td>
+                        <td>Semaines écoulées</td>
+                        <td id="avg-weeks-lived"></td>
+                        <td id="user-weeks-lived"></td>
                     </tr>
                     <tr>
-                        <td>Semaines écoulées</td>
-                        <td id="elapsed-weeks"></td>
-                        <td id="average-elapsed-weeks"></td>
+                        <td>Semaines restantes</td>
+                        <td id="avg-weeks-left"></td>
+                        <td id="user-weeks-left"></td>
                     </tr>
                     <tr>
                         <td>Pourcentage de temps restant total passé avec ses parents</td>
-                        <td id="remaining-parents"></td>
-                        <td id="average-remaining-parents"></td>
+                        <td id="avg-parent-time"></td>
+                        <td id="user-parent-time"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
+    <footer>
+        <p>LifeRedPill &copy; 2021</p>
+    </footer>
 </body>
 
 </html>
