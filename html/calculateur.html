@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeRedPill</title>
+    <title>Calculateur - LifeRedPill</title>
     <link rel="icon" href="../assets/img/icon/white.png" type="image/png">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/data.js"></script>
-    <script src="../js/table.js"></script>
-    <script src="../js/form.js"></script>
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/calculateur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="documentation.html">Documentation</a></li>
-                <li><a href="interactive.html">Interactif</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="summary">
+        <div class="header-content">
             <h1>LifeRedPill</h1>
-            <p>Un site web pour vous alerter sur le temps qui passe et l'urgence de valoriser l'usage de votre vie.</p>
-        </section>
-        <section id="table">
+            <nav>
+                <ul>
+                    <li><a href="./accueil.html">Accueil</a></li>
+                    <li><a href="./calculateur.html">Calculateur</a></li>
+                    <li><a href="./conseil.html">Conseils</a></li>
+                    <li><a href="./about.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="content">
+        <section id="table" class="table-container">
             <h2>Tableau interactif</h2>
             <p>Utilisez le formulaire ci-dessous pour voir comment vous vous comparez à une vie moyenne.</p>
-            <form id="life-form">
+            <form id="life-form" class="form-container">
                 <label for="age">Âge:</label>
                 <input type="number" id="age" name="age" min="0" max="90" required>
                 <label for="gender">Genre:</label>
@@ -47,33 +43,29 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Vie moyenne</th>
                         <th>Votre vie</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Semaines écoulées</td>
-                        <td id="avg-weeks-lived"></td>
                         <td id="user-weeks-lived"></td>
                     </tr>
                     <tr>
                         <td>Semaines restantes</td>
-                        <td id="avg-weeks-left"></td>
                         <td id="user-weeks-left"></td>
                     </tr>
                     <tr>
                         <td>Pourcentage de temps restant total passé avec ses parents</td>
-                        <td id="avg-parent-time"></td>
                         <td id="user-parent-time"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p>LifeRedPill &copy; 2023</p>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
-
 </html>
