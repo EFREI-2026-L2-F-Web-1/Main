@@ -1,0 +1,43 @@
+.hero {
+	background-image: url("../assets/img/content/redpill.png");
+	background-size: 80%;
+	background-position: 60% 55%;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 100px 0;
+	color: #ffffff;
+}
+
+.hero-content h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.cta-button {
+	display: inline-block;
+	background-color: red;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+}
+
+.about,
+.philosophy {
+	background-color: #fff;
+	padding: 50px;
+	margin-bottom: 30px;
+}
+
+.about h2,
+.philosophy h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: red;
+}
+
+.about p,
+.philosophy p {
+	color: #555;
+}
