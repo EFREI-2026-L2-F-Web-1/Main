@@ -33,20 +33,24 @@
 }
 
 .photos-container {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.photos-container figure {
-	margin: 0 10px;
+figure {
+  flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
+  margin: 10px;
+  text-align: center;
 }
 
-.profile-image-alix {
-	width: 150px;
-	height: 200px;
+img {
+  max-width: 20vh;
+  height: auto;
 }
 
-.profile-image-luka {
-	width: 200px;
-	height: 200px;
+figcaption {
+  margin-top: 10px;
+  text-align: center;
 }
