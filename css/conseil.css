@@ -1,7 +1,7 @@
 .sub-content {
-  background-color: #fff;
-  padding: 50px;
-  margin-bottom: 20px;
+	background-color: #fff;
+	padding: 50px;
+	margin-bottom: 20px;
 }
 
 .content h2 {
@@ -45,8 +45,8 @@ ul {
 }
 
 .cta-section {
-  width: 70%;
-  margin: 0 auto;
+	width: 70%;
+	margin: 0 auto;
 	background-color: #fff;
 	padding: 40px 0;
 	text-align: center;
