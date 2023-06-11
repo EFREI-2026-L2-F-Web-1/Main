@@ -109,5 +109,19 @@ footer{
     display:inline-block;
     vertical-align:top;
     font-size:15px;
-    
+
 }
+
+  .photos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .photos-container figure {
+    text-align: center;
+  }
+  .photos-container img {
+    height: 400px;
+    width: auto;
+    max-width: max-content;
+  }
