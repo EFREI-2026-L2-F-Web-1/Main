@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,6 @@
     <title>LifeRedPill</title>
     <link rel="icon" href="../assets/img/icon/white.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/data.js"></script>
-    <script src="../js/table.js"></script>
-    <script src="../js/form.js"></script>
-    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -74,6 +70,34 @@
     <footer>
         <p>LifeRedPill &copy; 2023</p>
     </footer>
+    <script>
+        document.getElementById('life-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêcher le rechargement de la page
+
+            // Récupérer les valeurs du formulaire
+            var age = parseInt(document.getElementById('age').value);
+            var gender = document.getElementById('gender').value;
+
+            // Calculer les semaines écoulées et restantes
+            var avgWeeksLived = age * 52; // Âge moyen en semaines
+            var userWeeksLived = age * 52; // Âge de l'utilisateur en semaines
+            var avgWeeksLeft = (90 - age) * 52; // Semaines restantes en moyenne
+            var userWeeksLeft = (90 - age) * 52; // Semaines restantes pour l'utilisateur
+
+            // Calculer le pourcentage de temps restant total passé avec les parents
+            var avgParentTime = gender === 'male' ? 80 : 75; // Pourcentage moyen pour le genre masculin ou féminin
+            var userParentTime = gender === 'male' ? 80 : 75; // Pourcentage pour l'utilisateur
+
+            // Mettre à jour les valeurs dans le tableau
+            document.getElementById('avg-weeks-lived').textContent = avgWeeksLived;
+            document.getElementById('user-weeks-lived').textContent = userWeeksLived;
+            document.getElementById('avg-weeks-left').textContent = avgWeeksLeft;
+            document.getElementById('user-weeks-left').textContent = userWeeksLeft;
+            document.getElementById('avg-parent-time').textContent = avgParentTime + '%';
+            document.getElementById('user-parent-time').textContent = userParentTime + '%';
+            console.log("test");
+        });
+    </script>
 </body>
 
 </html>
